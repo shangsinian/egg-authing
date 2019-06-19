@@ -86,6 +86,19 @@ see [config/config.default.js](config/config.default.js) for more detail.
   });
 ```
 
+```js
+  //Multiple instances example
+  const { ctx } = this;
+  const userPool1 = await ctx.authing.get('pool1').login({
+    email: 'test@testmail.com',
+		password: 'testpassword'
+  });
+  const userPool2 = await ctx.authing.get('pool2').login({
+    email: 'test@testmail.com',
+		password: 'testpassword'
+  });
+```
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/eggjs/egg/issues).
